@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.ui.SecondFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTintMode="screen"
+        android:isScrollContainer="true"
+        app:layout_scrollFlags="scroll"
+        tools:context=".EditParkActivity">
+
+        <ImageView
+            android:id="@+id/Image"
+            android:layout_width="0dp"
+            android:layout_height="256dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/appimg" />
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="@string/Name"
+            app:layout_constraintEnd_toEndOf="@+id/Image"
+            app:layout_constraintStart_toStartOf="@+id/Image"
+            app:layout_constraintTop_toBottomOf="@+id/Image" />
+
+        <EditText
+            android:id="@+id/Description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp"
+            android:text="@string/Description"
+            app:layout_constraintEnd_toEndOf="@+id/Name"
+            app:layout_constraintStart_toStartOf="@+id/Name"
+            app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+
+        <EditText
+            android:id="@+id/Phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text|numberPassword"
+            android:minHeight="48dp"
+            android:singleLine="false"
+            android:text="@string/PhoneNumber"
+            app:layout_constraintEnd_toEndOf="@+id/Description"
+            app:layout_constraintStart_toStartOf="@+id/Description"
+            app:layout_constraintTop_toBottomOf="@+id/Description" />
+
+        <EditText
+            android:id="@+id/webSite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp"
+            android:text="@string/website"
+            app:layout_constraintEnd_toEndOf="@+id/Phone"
+            app:layout_constraintStart_toStartOf="@+id/Phone"
+            app:layout_constraintTop_toBottomOf="@+id/Phone" />
+
+        <TextView
+            android:id="@+id/textViewOpening"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/OpeningTime"
+            app:layout_constraintEnd_toStartOf="@+id/textViewClose"
+            app:layout_constraintStart_toStartOf="@+id/webSite"
+            app:layout_constraintTop_toBottomOf="@+id/webSite" />
+
+        <Spinner
+            android:id="@+id/SpinnerOpeningTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/OpeningTime"
+            android:entries="@array/horas"
+            android:minHeight="48dp"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="@+id/textViewOpening"
+            app:layout_constraintStart_toStartOf="@+id/textViewOpening"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOpening" />
+
+        <TextView
+            android:id="@+id/textViewClose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ClosingTime"
+            app:layout_constraintEnd_toEndOf="@+id/webSite"
+            app:layout_constraintStart_toEndOf="@+id/textViewOpening"
+            app:layout_constraintTop_toBottomOf="@+id/webSite" />
+
+        <Spinner
+            android:id="@+id/SpinnerClosingTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/ClosingTime"
+            android:minHeight="48dp"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="@+id/webSite"
+            app:layout_constraintStart_toStartOf="@+id/textViewClose"
+            app:layout_constraintTop_toBottomOf="@+id/textViewClose" />
+
+        <TextView
+            android:id="@+id/textViewActivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/Activities"
+            app:layout_constraintStart_toStartOf="@+id/SpinnerOpeningTime"
+            app:layout_constraintTop_toBottomOf="@+id/SpinnerOpeningTime" />
+
+        <CheckBox
+            android:id="@+id/cb_sport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Sports"
+            app:layout_constraintStart_toStartOf="@+id/textViewActivities"
+            app:layout_constraintTop_toBottomOf="@+id/textViewActivities" />
+
+        <CheckBox
+            android:id="@+id/cb_children"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ChildrenPark"
+            app:layout_constraintStart_toStartOf="@+id/cb_sport"
+            app:layout_constraintTop_toBottomOf="@+id/cb_sport" />
+
+        <CheckBox
+            android:id="@+id/cb_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Bar"
+            app:layout_constraintStart_toStartOf="@+id/cb_children"
+            app:layout_constraintTop_toBottomOf="@+id/cb_children" />
+
+        <CheckBox
+            android:id="@+id/cb_mascotas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Pets"
+            app:layout_constraintStart_toStartOf="@+id/cb_bar"
+            app:layout_constraintTop_toBottomOf="@+id/cb_bar" />
+
+        <Button
+            android:id="@+id/btSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_mascotas" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+

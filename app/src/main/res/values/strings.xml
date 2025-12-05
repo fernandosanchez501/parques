@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">Especificaciones</string>
+    <string name="app_name">Parques</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="Name">Name</string>
+    <string name="Description">Description</string>
+    <string name="PhoneNumber">PhoneNumber</string>
+    <string name="website">website</string>
+    <string name="OpeningTime">Opening Time</string>
+    <string name="ClosingTime">Closing Time</string>
+    <string name="Activities">Activities</string>
+    <string name="Sports">Sports</string>
+    <string name="ChildrenPark">Children\'s Park</string>
+    <string name="Bar">Bar</string>
+    <string name="Save">Save</string>
+    <string name="Pets">Pets</string>
+    <string name="inicio">Inicio</string>
+    <string name="add_park">Add Park</string>
+    <string name="main">Main</string>
+    <string name="about">About</string>
+    <string name="SaveData">Save Data</string>
+    <string name="AskSaveData">Do you want to save data?</string>
+    <string name="dataSaved">Data has been saved</string>
+    <string name="actionCancelled">Action has been cancelled</string>
+    <string name="deletePark">Delete Park</string>
+    <string name="askDeletePark">"Do you want to delete "</string>
+
 </resources>
