@@ -22,7 +22,7 @@ object Parks {
     fun populate(context: Context, resource: Int) {
         // Este método añadirá a la lista Parks todos los parques
         // definidos en el fichero res/raw/parks.json
-
+        val uno = 1
         // Obtenemos un inputStream a partir del recurso JSON indicado y leemos el fichero
         val inputStream = context.resources.openRawResource(resource)
         // Lectura del stream. Con el delimitador \\A indicamos que se lea todo el fichero
